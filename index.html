@@ -129,6 +129,12 @@
             font-size: 1.1rem;
         }
         
+        .price-table .compare {
+            color: var(--gray);
+            font-size: 0.875rem;
+            text-decoration: line-through;
+        }
+        
         .quote-form {
             padding: 4rem 1rem;
             max-width: 600px;
@@ -230,43 +236,108 @@
     <section class="pricing">
         <div class="pricing-inner">
             <h2>Simple, Transparent Pricing</h2>
+            
             <table class="price-table">
                 <thead>
                     <tr>
                         <th>Load Size</th>
-                        <th>What's It Include?</th>
-                        <th>Price*</th>
+                        <th>Volume</th>
+                        <th>What Fits</th>
+                        <th>Our Price</th>
+                        <th>Compare*</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Small Load</td>
-                        <td>1-2 pieces of furniture, bags of trash</td>
-                        <td class="price">$75-125</td>
+                        <td><strong>Mini Load</strong></td>
+                        <td>3-5 cu yd</td>
+                        <td>3-5 furniture pieces, 10-15 bags</td>
+                        <td class="price">$75-100</td>
+                        <td class="compare">$120-150</td>
                     </tr>
                     <tr>
-                        <td>1/4 Truck</td>
-                        <td>Small garage cleanout, single room</td>
+                        <td><strong>Small Load</strong></td>
+                        <td>6-8 cu yd</td>
+                        <td>Studio/1BR apartment, garage section</td>
                         <td class="price">$125-175</td>
+                        <td class="compare">$175-225</td>
                     </tr>
                     <tr>
-                        <td>1/2 Truck</td>
-                        <td>Garage, basement, or hallway</td>
-                        <td class="price">$175-250</td>
+                        <td><strong>1/4 Truck</strong></td>
+                        <td>9-12 cu yd</td>
+                        <td>1BR apartment, small garage</td>
+                        <td class="price">$175-225</td>
+                        <td class="compare">$250-300</td>
                     </tr>
                     <tr>
-                        <td>Full Truck</td>
-                        <td>Whole house, estate cleanout</td>
-                        <td class="price">$300-400</td>
+                        <td><strong>1/2 Truck</strong></td>
+                        <td>15-18 cu yd</td>
+                        <td>2BR apartment, full garage, basement</td>
+                        <td class="price">$275-350</td>
+                        <td class="compare">$400-500</td>
                     </tr>
                     <tr>
-                        <td>Commercial</td>
-                        <td>Offices, construction debris</td>
-                        <td class="price">Custom Quote</td>
+                        <td><strong>Full Truck</strong></td>
+                        <td>20-24 cu yd</td>
+                        <td>3-4BR home, whole garage, estate</td>
+                        <td class="price">$400-500</td>
+                        <td class="compare">$600-800</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Commercial</strong></td>
+                        <td>Custom</td>
+                        <td>Construction debris, office cleanout</td>
+                        <td class="price">$50/hr</td>
+                        <td class="compare">$75-100/hr</td>
                     </tr>
                 </tbody>
             </table>
-            <p style="margin-top: 1rem; color: var(--gray); font-size: 0.875rem;">*Final price depends on weight, location, and items. Free on-site estimates!</p>
+            
+            <p style="margin-top: 1rem; color: var(--gray); font-size: 0.875rem;">*Compare: Typical 1-800-GOT-JUNK, Junk King & College Hunks pricing in Fort Worth area</p>
+            
+            <!-- Add-ons -->
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Optional Add-Ons</h3>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Same-Day Service</td>
+                        <td>Pickup within 4 hours</td>
+                        <td class="price">+$25-50</td>
+                    </tr>
+                    <tr>
+                        <td>After Hours</td>
+                        <td>Evening or weekend pickup</td>
+                        <td class="price">+$25</td>
+                    </tr>
+                    <tr>
+                        <td>Heavy Items</td>
+                        <td>Pianos, safes, spa/hot tubs</td>
+                        <td class="price">+$50-100</td>
+                    </tr>
+                    <tr>
+                        <td>Stairs/Labor</td>
+                        <td>2+ flights of stairs, heavy lifting</td>
+                        <td class="price">+$25-50</td>
+                    </tr>
+                    <tr>
+                        <td>Extended Travel</td>
+                        <td>Outside Fort Worth area (per mile)</td>
+                        <td class="price">$1.50/mi</td>
+                    </tr>
+                    <tr>
+                        <td>Disposal Fee</td>
+                        <td>Landfill/tip fees (if applicable)</td>
+                        <td class="price">Cost + 10%</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
     
