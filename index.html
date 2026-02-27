@@ -339,19 +339,22 @@
             localStorage.setItem('junkQuotes', JSON.stringify(quotes));
             
             // Send to FormSubmit.co (free, no registration needed)
+            // Note: FormSubmit.co needs form-encoded data, not JSON
+            const formBody = new URLSearchParams();
+            formBody.append('name', formData.name);
+            formBody.append('phone', formData.phone);
+            formBody.append('email', formData.email);
+            formBody.append('zip', formData.zip);
+            formBody.append('loadSize', formData.loadSize);
+            formBody.append('items', formData.items);
+            formBody.append('access', formData.access);
+            formBody.append('_subject', 'New Junk Quote - ' + formData.zip);
+            
             try {
                 await fetch('https://formsubmit.co/clawmango0+junkremoval@gmail.com', {
                     method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({
-                        name: formData.name,
-                        phone: formData.phone,
-                        email: formData.email,
-                        zip: formData.zip,
-                        loadSize: formData.loadSize,
-                        items: formData.items,
-                        access: formData.access
-                    })
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: formBody.toString()
                 });
             } catch (err) {
                 console.log('Form submitted locally');
